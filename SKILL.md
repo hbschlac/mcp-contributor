@@ -292,7 +292,7 @@ Each SDK repo has its own maintainers, CONTRIBUTING.md, and Discord channel. Don
 
 **Before code:**
 1. **Open an issue first** describing the approach. Avoids duplicate work, aligns with SDK direction.
-2. Join the SDK's Discord channel: `#typescript-sdk-dev`, `#python-sdk-dev`, `#go-sdk-dev`, etc.
+2. Join the SDK's Discord channel. Naming isn't uniform — the verified channel for SDK coordination is `#general-sdk-dev` (§5.5.4). Per-language channels may exist (e.g. a `#<lang>-sdk-dev` pattern was observed for some SDKs) but verify in Discord before assuming one exists for your target language. If unsure, ask in `#general-sdk-dev`.
 3. Read that repo's `CONTRIBUTING.md` — setup, style, commit conventions vary.
 4. Write tests. Bug fix → test that reproduces. New feature → coverage for expected behavior.
 
@@ -713,32 +713,32 @@ From the [MCP roadmap](https://modelcontextprotocol.io/development/roadmap) (las
 
 ## Step 6.6: Worked example — SEP-2133 (Extensions Framework)
 
-Concrete reference for what a merged+FINAL SEP looks like. [PR #2133](https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133) — merged and marked FINAL January 26, 2026.
+Concrete reference for what a merged+FINAL SEP looks like. Read [PR #2133](https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2133) directly for the current shape of the diff, reviewer list, and vote record — don't rely on a cached summary for those specifics (they rot).
 
-**What it established:**
+**What the SEP established** (from the merged doc, [SEP-2133](https://modelcontextprotocol.io/seps/2133-extensions)):
 - Extensions governance + technical standards
 - **Extension identifiers:** reverse-domain notation (e.g. `io.modelcontextprotocol/oauth-client-credentials`)
 - **Official extensions:** live in dedicated repos under `github.com/modelcontextprotocol/ext-*`
 - **Capability negotiation:** `extensions` field added to `ClientCapabilities` and `ServerCapabilities`
 - Legal framework: trademark, antitrust, licensing, contributor provisions
 
-**Files changed (a real SEP's diff):**
-- New SEP doc: `seps/2133-extensions.md`
-- Schema updates to `ClientCapabilities`/`ServerCapabilities`
-- New `extensions.mdx` docs page
-- Lifecycle specification updates
-- Example JSON files demonstrating extension capabilities
+**Typical shape of a Standards-Track SEP's diff** (use PR #2133 as a template):
+- New SEP doc at `seps/<num>-<slug>.md`
+- Schema updates to relevant types in `schema/draft/schema.ts`
+- Docs page(s) in `docs/`
+- Lifecycle / spec page updates if needed
+- Example JSON/TypeScript demonstrating the feature
 
-**Review pattern to imitate:**
-- Extensive review by multiple Core Maintainers (pwwpche, dsp-ant, kurtisvg, pcarleton)
-- Comments focused on: definition clarity, collision prevention, breaking-change definitions, RFC 2119 normative language consistency
-- Final vote: **7 yes / 2 yes-with-changes / 0 no** (unanimous pass with conditions)
+**Review pattern worth imitating** (verify current reviewers on the PR itself):
+- Expect extensive Core Maintainer review across multiple rounds
+- Comments typically focus on: definition clarity, collision prevention, breaking-change definitions, **RFC 2119 normative language consistency** (MUST / SHOULD / MAY)
+- Final decision happens at the biweekly Core Maintainer meeting (§5.4) — vote counts are recorded on the PR; check there, don't cache them in this skill
 
 **Takeaways for your own SEP:**
-- Use RFC 2119 keywords (MUST/SHOULD/MAY) consistently
+- Use RFC 2119 keywords (MUST/SHOULD/MAY) consistently — reviewers will call this out
 - Pre-empt collision/naming questions before review
 - Be explicit about what counts as a breaking change
-- Expect 4+ maintainer rounds; budget for iteration
+- Expect 4+ maintainer review rounds; budget for iteration
 - Include example JSON/code, not just prose
 - Legal clauses matter — don't omit them for a governance-adjacent SEP
 
@@ -790,7 +790,7 @@ The MCP Contributor Discord is for **contributors**, not general MCP user suppor
 - Promote products or vendors (keep discussions vendor-neutral; brand mentions OK only as examples relevant to the spec)
 - Treat it as a persistent record — it isn't
 
-**Public channels cover:** SDK development (`#typescript-sdk-dev`, `#python-sdk-dev`, `#inspector-dev`, etc.), WG/IG channels (`#auth-wg`, `#security-ig`, etc.), onboarding, office hours.
+**Public channels cover:** SDK development (the verified cross-SDK channel is `#general-sdk-dev`; per-language channels may exist but verify before citing), WG/IG channels (verified in §5.5.4 table: `#auth-wg-*`, `#server-identity-wg`, `#agents-wg`, `#transports-wg`, `#security-ig`, etc.), onboarding, office hours.
 
 **Private channels exist** only for: security incidents (CVEs), people matters (CoC, maintainer stuff), temporary "incident rooms." They're NOT for routine development. Some are read-only for maintainer decisions.
 
