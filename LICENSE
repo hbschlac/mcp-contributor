@@ -199,14 +199,3 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
    implied. See the License for the specific language governing
    permissions and limitations under the License.
-
-   -----
-
-   Note on the synthesized content in SKILL.md:
-
-   Portions of SKILL.md are condensed summaries of documentation at
-   modelcontextprotocol.io, which is published under CC-BY 4.0
-   (<https://creativecommons.org/licenses/by/4.0>). Attribution is
-   preserved via per-section source URLs in `sources.yml` and inline
-   "Source:" links throughout SKILL.md. Downstream users redistributing
-   derivative skills should preserve that attribution chain.

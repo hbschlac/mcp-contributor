@@ -93,7 +93,7 @@ If MCP publishes a new page that belongs in the skill, `refresh.sh` will flag it
 
 **Apache License 2.0** — see [LICENSE](./LICENSE). Matches the MCP project's own license.
 
-The synthesized content in `SKILL.md` is distilled from pages at [modelcontextprotocol.io](https://modelcontextprotocol.io), which are published under **CC-BY 4.0**. Per-section attribution is preserved inline and in `sources.yml`. If you fork and redistribute, keep the attribution chain intact.
+Third-party attributions (including the CC-BY 4.0 provenance of the synthesized content in `SKILL.md`) are in [NOTICE](./NOTICE). If you fork and redistribute, keep the attribution chain intact.
 
 ## Security
 

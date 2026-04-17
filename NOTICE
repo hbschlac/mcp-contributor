@@ -1,0 +1,27 @@
+mcp-contributor
+Copyright 2026 Hannah Schlacter and contributors
+
+This product includes software developed under the Apache License, Version 2.0.
+See LICENSE for the full license text.
+
+------------------------------------------------------------------------
+
+Third-party attributions
+
+Portions of SKILL.md are condensed summaries of documentation at
+https://modelcontextprotocol.io, which is published under the Creative
+Commons Attribution 4.0 International License (CC-BY 4.0):
+https://creativecommons.org/licenses/by/4.0
+
+Per-section attribution is preserved two ways:
+  - Inline "Source:" URLs throughout SKILL.md
+  - Machine-readable per-URL coverage map in sources.yml
+
+If you fork or redistribute a derivative of this skill, preserve the
+attribution chain so downstream users can trace each claim back to the
+authoritative MCP documentation.
+
+The Model Context Protocol (MCP) project itself is governed under the
+Linux Foundation as "Model Context Protocol a Series of LF Projects, LLC".
+See https://modelcontextprotocol.io/community/governance for the
+authoritative governance model.
