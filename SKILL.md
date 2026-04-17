@@ -831,7 +831,27 @@ The strict reading of rule #2 is that *any* top-level "I built X, here it is" po
 
 ### 8.2c Introduction post template (the ONE case where a brief mention is OK)
 
-In `#introductions` only, as a first post:
+**Step 0 — before ANY post, including the intro: confirm your employer's OSS policy allows personal contribution to MCP.** Most large employers have explicit rules (intranet search for "open source contribution policy"). Check:
+- Does your employment agreement's IP / outside-work clause cover this?
+- Does your employer require manager pre-approval for OSS participation?
+- Does your employer require a specific disclosure format when you identify as an employee in OSS forums?
+
+If your employer blocks or conditions personal MCP contribution → **resolve that first**. Don't post, don't set a display name, don't lurk with an identifiable handle until cleared. The post is permanent; the policy check is 10 minutes.
+
+**Step 0a — pick your display-name format (server rule: `name (company)` or `username (company)`)**:
+
+| Format | When to use |
+|---|---|
+| `Name (Employer)` | You're contributing as a representative of your employer (rare for individual contributors) |
+| `Name (Employer, personal)` | **Default for employed people contributing in personal capacity.** Truthful, clearly signals you're not speaking for the employer. |
+| `Name (personal)` or `Name (independent)` | Self-employed, between jobs, or your employer's OSS policy explicitly requires non-employer affiliation labels. Strict reading of MCP's rule expects `(company)`, so prefer the `(Employer, personal)` form when an employer exists. |
+| `Name (freelance)` | Only if you are actually freelance. Not a hedge for "I don't want to name my employer." |
+
+**Never pick a label that's inaccurate** — MCP contributors often have employer-facing presences (LinkedIn, personal sites) and inaccurate affiliation gets noticed. Dishonest labeling is a worse look than any honest affiliation.
+
+**Step 0b — if you work somewhere with antitrust exposure** (big tech, finance, retail-tech, enterprise SaaS), skim MCP's [Antitrust Policy](https://modelcontextprotocol.io/community/antitrust) before posting. Your words could be read as your employer's position in edge cases. The `(Employer, personal)` label reduces but doesn't eliminate this.
+
+**Then** post in `#introductions` only, as a first post:
 
 ```
 Hi 👋 <name> — <one-line role/background>, recently started contributing to MCP.
@@ -841,7 +861,8 @@ Looking forward to lurking, learning, and eventually <concrete contribution goal
 ```
 
 Rules this must follow:
-- Set display name per §8.2 rule 5 FIRST
+- Employer OSS policy confirmed (Step 0) — NO EXCEPTIONS
+- Display name set per Step 0a FIRST
 - No links in the intro post
 - No "I made an X, check it out" — that's promo
 - One sentence of background, not a résumé
