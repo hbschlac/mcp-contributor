@@ -796,6 +796,40 @@ The MCP Contributor Discord is for **contributors**, not general MCP user suppor
 
 **Transparency rule:** Any Discord discussion that heads toward a decision or proposal MUST be moved to GitHub Discussions or an Issue (tag `notes`) to create a persistent searchable record. Don't let decisions die in chat.
 
+### 8.2a Before your first post in any Discord channel — checklist
+
+The authoritative posting rules live **in Discord** (pinned messages + any `#rules` / `#welcome` channel). Those aren't published publicly — this skill cannot fetch them. **Run this every time before a first post in a channel:**
+
+1. **Read the server-wide rules channel first** — typically `#rules`, `#welcome`, `#info`, or `#read-me-first`. Scroll to the top / read any Welcome pins.
+2. **Read pinned messages in the target channel.** Click the pin icon in Discord's channel header. Pins often contain: posting frequency limits, allowed topics, self-promotion policy, required tags, CoC reminders.
+3. **Check the channel description** (hover over the channel name or read the topic bar).
+4. **Scroll back ~50 messages.** See what other first-time posters posted and how the community reacted. Moderators redirecting people = signal about norms.
+5. **If sharing a tool or resource:** look specifically for rules about self-promotion, link-sharing, or a dedicated `#show-and-tell` / `#showcase` / `#projects` channel. Default to the most on-topic channel, not `#general`.
+6. **If in doubt:** post a shorter version first, or ask in `#general`: *"where's the right place to share a [thing type] for [audience]?"* before linking.
+
+**Public rules I can tell you** (from `/community/communication`):
+- Discord is for **contributors**, not general MCP user support.
+- **No vendor or product marketing.** Brand mentions OK only as spec-relevant examples.
+- Security issues **never** post publicly — use SECURITY.md flow (§8.3).
+- Any Discord discussion leading to a decision **must** move to GitHub Discussions/Issues with the `notes` label.
+- Private channels are "incident rooms" only, not routine dev.
+
+**What I can't tell you** (Discord-internal; require human check):
+- Specific channel rules in pinned messages
+- Self-promotion / link-post frequency limits
+- Whether a dedicated `#show-and-tell` channel exists
+- Current moderators' enforcement style
+
+### 8.2b Sharing a contributor tool (skill, script, SDK extension) — recommended flow
+
+1. Run §8.2a checklist. Do not skip.
+2. Prefer a dedicated showcase channel if one exists. Otherwise `#general`.
+3. Post the shortest useful version: one-line what-it-does + link + license + invite-feedback. No CTAs, no hype.
+4. If your tool is tied to a vendor (e.g. Claude Code-specific), frame as "tool I built for contributors" — not product marketing. The §8.2 vendor-neutral rule still applies.
+5. **Disclose AI-assisted authorship** (§9) in the post if the tool was built with Claude / other AI help.
+6. Expect polite nods, not engagement. First-post signal is the link being indexed; conversation comes later.
+7. If a moderator redirects you, move immediately without argument — that's data about server norms.
+
 ### 8.3 Security issues — the one rule to never break
 
 - Do NOT open public issues, PRs, or Discord posts for vulnerabilities.
