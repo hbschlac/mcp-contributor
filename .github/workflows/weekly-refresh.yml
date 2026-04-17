@@ -1,0 +1,58 @@
+name: weekly-refresh
+
+# Runs refresh.sh weekly and opens an issue if drift, new pages, or gap-high
+# items are detected. This is the downstream-friendly equivalent of the local
+# launchd job documented in README.md — fork, enable Actions, done.
+
+on:
+  schedule:
+    # Sundays 05:05 UTC (approximately matches maintainer's local Sunday evening)
+    - cron: "5 5 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install yq
+        run: sudo snap install yq || (curl -L -o /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 && sudo chmod +x /usr/local/bin/yq)
+
+      - name: Run refresh
+        id: refresh
+        run: |
+          bash refresh.sh
+          echo "report<<EOF" >> $GITHUB_OUTPUT
+          cat refresh-report.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: refresh-report
+          path: |
+            refresh-report.md
+            hashes.json
+          retention-days: 30
+
+      - name: Open issue on drift / gaps
+        if: steps.refresh.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('refresh-report.md', 'utf8');
+            const today = new Date().toISOString().slice(0, 10);
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[refresh ${today}] drift or gaps detected`,
+              body: report,
+              labels: ['refresh', 'drift'],
+            });

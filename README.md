@@ -1,5 +1,10 @@
 # mcp-contributor
 
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
+[![Version](https://img.shields.io/github/v/tag/hbschlac/mcp-contributor?label=version)](https://github.com/hbschlac/mcp-contributor/tags)
+[![Weekly refresh](https://github.com/hbschlac/mcp-contributor/actions/workflows/weekly-refresh.yml/badge.svg)](https://github.com/hbschlac/mcp-contributor/actions/workflows/weekly-refresh.yml)
+[![MCP](https://img.shields.io/badge/MCP-2025--11--25-5b21b6)](https://modelcontextprotocol.io/specification/2025-11-25)
+
 A Claude Code skill for contributing **upstream to the Model Context Protocol (MCP)** governance org — the spec, official SDKs, and docs at [github.com/modelcontextprotocol](https://github.com/modelcontextprotocol).
 
 **Not for** building MCP servers. Use the `mcp-builder` skill (separate) for that.
@@ -86,7 +91,13 @@ If MCP publishes a new page that belongs in the skill, `refresh.sh` will flag it
 
 ## License
 
-Apache License 2.0 — matches the MCP project's own license.
+**Apache License 2.0** — see [LICENSE](./LICENSE). Matches the MCP project's own license.
+
+The synthesized content in `SKILL.md` is distilled from pages at [modelcontextprotocol.io](https://modelcontextprotocol.io), which are published under **CC-BY 4.0**. Per-section attribution is preserved inline and in `sources.yml`. If you fork and redistribute, keep the attribution chain intact.
+
+## Security
+
+See [SECURITY.md](./SECURITY.md) for how to report vulnerabilities privately.
 
 ## Why this skill exists
 

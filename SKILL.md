@@ -1,11 +1,11 @@
 ---
 name: mcp-contributor
-description: Hannah's skill for contributing upstream to the Model Context Protocol (MCP) governance org — the spec, official SDKs, and docs at github.com/modelcontextprotocol. Triggers on any of: "contribute to MCP", "contribute upstream to MCP", "MCP spec PR", "MCP PR", "open a PR to modelcontextprotocol", "submit to modelcontextprotocol", "MCP good first issue", "find an MCP maintainer", "MCP working group", "MCP interest group", "MCP sponsor", "write an SEP", "draft an SEP", "submit an SEP", "SEP for MCP", "I want to do an SEP", "propose a change to MCP", "propose an MCP spec change", "MCP specification enhancement proposal", "change the MCP spec", "add a feature to MCP", "new MCP RPC method", "MCP schema change", "edit MCP docs", "fix MCP typo", "contribute to MCP SDK", "MCP TypeScript SDK PR", "MCP Python SDK PR", "MCP Go/Rust/Java/Kotlin/C#/Swift/Ruby/PHP SDK PR", "modelcontextprotocol org", "MCP governance contribution". Covers triage (small change vs SEP), env setup, fork/branch/PR workflow, schema changes, docs changes, full SEP lifecycle (types, statuses, prototype, sponsor, review meetings), and AI-contribution disclosure. NOT for building your own MCP servers — that's mcp-builder.
+description: Skill for contributing upstream to the Model Context Protocol (MCP) governance org — the spec, official SDKs, and docs at github.com/modelcontextprotocol. Triggers on any of: "contribute to MCP", "contribute upstream to MCP", "MCP spec PR", "MCP PR", "open a PR to modelcontextprotocol", "submit to modelcontextprotocol", "MCP good first issue", "find an MCP maintainer", "MCP working group", "MCP interest group", "MCP sponsor", "write an SEP", "draft an SEP", "submit an SEP", "SEP for MCP", "I want to do an SEP", "propose a change to MCP", "propose an MCP spec change", "MCP specification enhancement proposal", "change the MCP spec", "add a feature to MCP", "new MCP RPC method", "MCP schema change", "edit MCP docs", "fix MCP typo", "contribute to MCP SDK", "MCP TypeScript SDK PR", "MCP Python SDK PR", "MCP Go/Rust/Java/Kotlin/C#/Swift/Ruby/PHP SDK PR", "modelcontextprotocol org", "MCP governance contribution". Covers triage (small change vs SEP), env setup, fork/branch/PR workflow, schema changes, docs changes, full SEP lifecycle (types, statuses, prototype, sponsor, review meetings), and AI-contribution disclosure. NOT for building your own MCP servers — that's mcp-builder.
 ---
 
 # MCP Contributor
 
-Hannah's end-to-end guide for contributing to the **Model Context Protocol** governance org (`github.com/modelcontextprotocol`). Covers the spec repo, all 10 official SDKs, and docs.
+End-to-end guide for contributing to the **Model Context Protocol** governance org (`github.com/modelcontextprotocol`). Covers the spec repo, all 10 official SDKs, and docs.
 
 **Not for:** building your own MCP servers/clients. Use `mcp-builder` for that.
 
@@ -61,7 +61,7 @@ When your PR touches any of the concepts above → read the matching subpage of 
 
 ## Step 1: Triage the contribution type
 
-Before any code, classify what Hannah wants to do. The process diverges sharply — get this wrong and the PR gets closed or the SEP gets parked.
+Before any code, classify the contribution. The process diverges sharply — get this wrong and the PR gets closed or the SEP gets parked.
 
 ### 1.1 The core decision
 
@@ -179,7 +179,7 @@ The spec repo is `modelcontextprotocol/modelcontextprotocol`. SDK repos listed i
 gh repo fork modelcontextprotocol/modelcontextprotocol --clone=false
 
 # 2. Clone YOUR fork
-git clone https://github.com/hbschlac/modelcontextprotocol.git
+git clone https://github.com/YOUR-USERNAME/modelcontextprotocol.git
 cd modelcontextprotocol
 
 # 3. Install deps
@@ -364,7 +364,7 @@ Idea → (PR with SEP file) → Awaiting Sponsor (up to 6mo)
 | `superseded` | Replaced by newer SEP |
 | `dormant` | No sponsor within 6 months — NOT rejected; revivable |
 
-**Key rule:** the **sponsor** updates status (both the markdown `Status:` field AND the matching PR label — keep in sync). Hannah as author does NOT edit status directly — request changes through the sponsor.
+**Key rule:** the **sponsor** updates status (both the markdown `Status:` field AND the matching PR label — keep in sync). The author does NOT edit status directly — request changes through the sponsor.
 
 ### 5.5 Prototype requirement
 
@@ -449,7 +449,7 @@ Understanding who decides what saves weeks. MCP is **Model Context Protocol a Se
 | **Lead Maintainers (BDFL)** | Final decision authority | Can veto any Core/Maintainer decision; appoint/remove Core Maintainers; admins on all infra |
 | **Core Maintainers** | Overall project direction + spec stewardship | Veto Maintainer decisions by majority vote; resolve disputes; appoint/remove Maintainers; admin access to all repos (but use PR workflow) |
 | **Maintainers** | A specific area (an SDK, docs, a Working Group) | Write access to their repo(s); decide for their area, escalate when needed |
-| **Contributors** | Anyone filing issues / PRs / joining discussions | That's Hannah by default |
+| **Contributors** | Anyone filing issues / PRs / joining discussions | That's you by default |
 
 Outside the Steering Group (but on the [Contributor Ladder](https://modelcontextprotocol.io/community/contributor-ladder)): **Member** and **Community Moderator**. Memberships are individual, not corporate — no reserved seats by employer, no term limits.
 
@@ -655,9 +655,9 @@ Policy amendments take effect 30 days after publication (Trademark Policy + Term
 - [ ] You haven't attached a restrictive license header
 - [ ] If redistributing docs content, attribution is preserved per CC-BY 4.0
 
-### 5.5.11 Hannah's likely onramp
+### 5.5.11 Typical onramp
 
-If Hannah wants to get involved seriously:
+For someone getting involved seriously:
 1. Join [Discord](https://discord.gg/6CSzBmMkjX), lurk 1–2 IGs aligned to her interests.
 2. Attend [live calls](https://meet.modelcontextprotocol.io/); ship small PRs / take meeting notes.
 3. After ~3 months of sustained contribution in a WG → nominate for WG Member.
@@ -832,7 +832,7 @@ Decision write-ups should capture: decision makers, background/motivation, optio
 
 MCP welcomes AI-assisted contributions. **Disclose** in the PR/issue body with a one-liner: "Drafted with Claude; I reviewed and tested all changes."
 
-Hannah must be able to:
+The human contributor must be able to:
 - Explain what the change does
 - Articulate why it's needed
 - Verify it works (tests pass, behavior confirmed)
