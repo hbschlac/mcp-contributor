@@ -658,10 +658,11 @@ Policy amendments take effect 30 days after publication (Trademark Policy + Term
 ### 5.5.11 Typical onramp
 
 For someone getting involved seriously:
-1. Join [Discord](https://discord.gg/6CSzBmMkjX), lurk 1–2 IGs aligned to her interests.
-2. Attend [live calls](https://meet.modelcontextprotocol.io/); ship small PRs / take meeting notes.
-3. After ~3 months of sustained contribution in a WG → nominate for WG Member.
-4. Longer-term path to Maintainer via [Contributor Ladder](https://modelcontextprotocol.io/community/contributor-ladder).
+1. Join [Discord](https://discord.gg/6CSzBmMkjX). **Set display name to `name (company)` or `username (company)` before first post** (server rule, §8.2). Lurk 1–2 IGs aligned to your interests.
+2. Read the spec; the server assumes base understanding. Don't use Discord as a getting-started venue.
+3. Attend [live calls](https://meet.modelcontextprotocol.io/); ship small PRs / take meeting notes.
+4. After ~3 months of sustained contribution in a WG → nominate for WG Member.
+5. Longer-term path to Maintainer via [Contributor Ladder](https://modelcontextprotocol.io/community/contributor-ladder).
 
 ---
 
@@ -783,52 +784,68 @@ All channels governed by the [Code of Conduct](https://github.com/modelcontextpr
 
 **Critical rule:** feature requests → Discussions, NOT Issues. Bugs with repro → Issues. SEPs → PR to `seps/`. This is the single most common newcomer mistake.
 
-### 8.2 Discord etiquette
+### 8.2 Discord etiquette — MCP's rules are STRICTER than most OSS Discords
 
-The MCP Contributor Discord is for **contributors**, not general MCP user support. Don't:
-- Ask for help using MCP as a developer (→ official docs / Discussions)
-- Promote products or vendors (keep discussions vendor-neutral; brand mentions OK only as examples relevant to the spec)
-- Treat it as a persistent record — it isn't
+Read these carefully. Violations (especially #2) are ban-worthy. **Source: MCP Contributor Discord pinned rules + [/community/communication](https://modelcontextprotocol.io/community/communication). Last verified 2026-04-16.**
 
-**Public channels cover:** SDK development (the verified cross-SDK channel is `#general-sdk-dev`; per-language channels may exist but verify before citing), WG/IG channels (verified in §5.5.4 table: `#auth-wg-*`, `#server-identity-wg`, `#agents-wg`, `#transports-wg`, `#security-ig`, etc.), onboarding, office hours.
+**The ten rules:**
 
-**Private channels exist** only for: security incidents (CVEs), people matters (CoC, maintainer stuff), temporary "incident rooms." They're NOT for routine development. Some are read-only for maintainer decisions.
+1. **Scope of the server.** It exists to **advance MCP as a protocol**. Not a user-support forum, not a "getting started with MCP" channel. Participants are assumed to have a solid base understanding of the spec.
+2. **No self-promotion. Period.** Beyond introducing yourself, **do not bring up your project or product unless it is directly relevant to the discussion at hand**. Standalone announcements of tools/skills/SDKs/services are out.
+3. **Solicitation of work anywhere on the server is a bannable offense.** Don't DM maintainers for hire. Don't post "looking for contract work."
+4. **Usage discussions are out of scope** — unless the usage is being cited as an example for a protocol improvement or proposal. "How do I implement X with MCP?" is the wrong question here; ask in GitHub Discussions or the user-facing channels of specific clients.
+5. **Display name format is required:** `name (company)` or `username (company)`. Set this before your first post.
+6. **Use threads, not main-channel messages,** for anything beyond a single-message ack. Threads keep channels browsable.
+7. **No vendor or product marketing.** Brand mentions OK only as spec-relevant examples (from `/community/communication`).
+8. **Security issues never post publicly** — use the [SECURITY.md](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/SECURITY.md) private flow (§8.3).
+9. **Any Discord discussion heading toward a decision or proposal MUST move to GitHub Discussions or an Issue** (tag `notes`) to create a persistent searchable record.
+10. **Private channels** are "incident rooms" (CoC, security, people matters). Not for routine dev.
 
-**Transparency rule:** Any Discord discussion that heads toward a decision or proposal MUST be moved to GitHub Discussions or an Issue (tag `notes`) to create a persistent searchable record. Don't let decisions die in chat.
+**Public channels cover** (per `/community/communication`): SDK development (the verified cross-SDK channel is `#general-sdk-dev`; per-language channels may exist but verify), WG/IG channels (§5.5.4), onboarding, office hours.
 
 ### 8.2a Before your first post in any Discord channel — checklist
 
-The authoritative posting rules live **in Discord** (pinned messages + any `#rules` / `#welcome` channel). Those aren't published publicly — this skill cannot fetch them. **Run this every time before a first post in a channel:**
+1. **Set your display name to `name (company)` or `username (company)`** before posting anything.
+2. **Read the server-wide rules channel** (and any pinned welcome).
+3. **Read pinned messages in the target channel.** Click the pin icon in Discord's channel header.
+4. **Check the channel description** (topic bar).
+5. **Scroll back ~50 messages.** Watch how moderators redirect people — that's the ground-truth norm.
+6. **Start a thread for anything multi-message.** Don't bury the main channel.
 
-1. **Read the server-wide rules channel first** — typically `#rules`, `#welcome`, `#info`, or `#read-me-first`. Scroll to the top / read any Welcome pins.
-2. **Read pinned messages in the target channel.** Click the pin icon in Discord's channel header. Pins often contain: posting frequency limits, allowed topics, self-promotion policy, required tags, CoC reminders.
-3. **Check the channel description** (hover over the channel name or read the topic bar).
-4. **Scroll back ~50 messages.** See what other first-time posters posted and how the community reacted. Moderators redirecting people = signal about norms.
-5. **If sharing a tool or resource:** look specifically for rules about self-promotion, link-sharing, or a dedicated `#show-and-tell` / `#showcase` / `#projects` channel. Default to the most on-topic channel, not `#general`.
-6. **If in doubt:** post a shorter version first, or ask in `#general`: *"where's the right place to share a [thing type] for [audience]?"* before linking.
+### 8.2b DO NOT post a standalone tool/skill/project announcement
 
-**Public rules I can tell you** (from `/community/communication`):
-- Discord is for **contributors**, not general MCP user support.
-- **No vendor or product marketing.** Brand mentions OK only as spec-relevant examples.
-- Security issues **never** post publicly — use SECURITY.md flow (§8.3).
-- Any Discord discussion leading to a decision **must** move to GitHub Discussions/Issues with the `notes` label.
-- Private channels are "incident rooms" only, not routine dev.
+The strict reading of rule #2 is that *any* top-level "I built X, here it is" post is self-promotion, even if the tool is MCP-related and open-source. **Exceptions are narrow:**
 
-**What I can't tell you** (Discord-internal; require human check):
-- Specific channel rules in pinned messages
-- Self-promotion / link-post frequency limits
-- Whether a dedicated `#show-and-tell` channel exists
-- Current moderators' enforcement style
+- ✅ **In `#introductions`, you may briefly mention what you build.** Keep it one line of context, no link.
+- ✅ **In a live discussion where your tool is directly relevant**, you may reply in-thread with the link + "I made this, happy to take feedback." The tool must answer the specific question being asked.
+- ✅ **If a maintainer explicitly asks you to share**, you may share in whatever channel they pointed you to.
+- ❌ **Do NOT** open a top-level message in `#general`, `#show-and-tell` (if it even exists here — don't assume), or any dev channel with "hey I built X, here's the link." That's the default-self-promo pattern the rule bans.
+- ❌ **Do NOT** pre-announce a tool before it's been referenced in an existing discussion.
 
-### 8.2b Sharing a contributor tool (skill, script, SDK extension) — recommended flow
+**If you genuinely want the community to know about a contributor tool:**
+- Path A: lurk for weeks; wait for a discussion where the tool is the natural answer; reply in-thread.
+- Path B: open a GitHub Discussion in `modelcontextprotocol/modelcontextprotocol` (or the relevant SDK repo) describing the tool + why it exists. GitHub Discussions are on-topic for tooling; Discord isn't.
+- Path C: if the tool is specifically useful for contributors, propose documenting it in the community docs via a PR. That's on-topic.
 
-1. Run §8.2a checklist. Do not skip.
-2. Prefer a dedicated showcase channel if one exists. Otherwise `#general`.
-3. Post the shortest useful version: one-line what-it-does + link + license + invite-feedback. No CTAs, no hype.
-4. If your tool is tied to a vendor (e.g. Claude Code-specific), frame as "tool I built for contributors" — not product marketing. The §8.2 vendor-neutral rule still applies.
-5. **Disclose AI-assisted authorship** (§9) in the post if the tool was built with Claude / other AI help.
-6. Expect polite nods, not engagement. First-post signal is the link being indexed; conversation comes later.
-7. If a moderator redirects you, move immediately without argument — that's data about server norms.
+**Rule-of-thumb:** if you're typing "just wanted to share..." into Discord, stop. Open a GitHub Discussion instead.
+
+### 8.2c Introduction post template (the ONE case where a brief mention is OK)
+
+In `#introductions` only, as a first post:
+
+```
+Hi 👋 <name> — <one-line role/background>, recently started contributing to MCP.
+Been digging into <specific area, e.g. the SEP process / auth / tasks>.
+<Optional: one sentence about what you build in your day job, no link>.
+Looking forward to lurking, learning, and eventually <concrete contribution goal>.
+```
+
+Rules this must follow:
+- Set display name per §8.2 rule 5 FIRST
+- No links in the intro post
+- No "I made an X, check it out" — that's promo
+- One sentence of background, not a résumé
+- Name a concrete thing you want to learn/contribute, not a vague interest
 
 ### 8.3 Security issues — the one rule to never break
 
