@@ -4,6 +4,18 @@ All notable changes to this skill are documented here. Format loosely follows [K
 
 ## [Unreleased]
 
+## [0.2.1] — 2026-04-16
+
+### Verified
+- **Dry-run #2** on [modelcontextprotocol/inspector#832](https://github.com/modelcontextprotocol/inspector/issues/832) confirmed all v0.1.1 + v0.2.0 fixes held: §1.4 SDK-local breaking-change rule, §2 per-SDK toolchain, §4 + §8.2 Discord softening, §6.6 SEP-2133 de-specificing, §7 org-wide gh search. No regressions.
+- **Trigger mechanics** measured: frontmatter valid, description 1190 chars (under hard cap), 31 quoted trigger phrases. Manual activation protocol added to README.
+
+### Known — filed as GitHub issues for v0.3
+- §6 repo map missing Inspector, Registry, ext-*, access, .github
+- §4 title 'SDK workflow' misleading (applies to all non-spec repos)
+- No cross-reference from §1.5 gray-zone decisions → §11.7 lifecycle capability check
+
+
 ## [0.2.0] — 2026-04-16
 
 ### Added

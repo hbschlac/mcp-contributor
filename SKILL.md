@@ -1101,3 +1101,4 @@ Source: https://modelcontextprotocol.io/seps/index. Totals: **27 Final / 2 Accep
 Append one-liners when this skill is used on real contributions — SHA, PR URL, lessons.
 
 <!-- 2026-04-16: skill scaffolded from modelcontextprotocol.io/community/contributing -->
+<!-- 2026-04-16: dry-run #2 on modelcontextprotocol/inspector#832 — all dry-run #1 bugs held (§1.4, §2, §4/§8.2, §6.6, §7). New bugs filed as GH issues: §6 missing non-SDK repos, §4 mistitled, no §11.7 cross-ref. Skill correctly triaged #832 as direct PR, not SEP. -->
