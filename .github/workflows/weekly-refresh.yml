@@ -1,13 +1,18 @@
 name: weekly-refresh
 
-# Runs refresh.sh weekly and opens an issue if drift, new pages, or gap-high
-# items are detected. This is the downstream-friendly equivalent of the local
-# launchd job documented in README.md — fork, enable Actions, done.
+# Runs refresh.sh on demand and opens an issue if drift, new pages, or gap-high
+# items are detected. Manual dispatch only; see the note on the trigger below.
 
 on:
-  schedule:
-    # Sundays 05:05 UTC (approximately matches maintainer's local Sunday evening)
-    - cron: "5 5 * * 0"
+  # The weekly schedule is intentionally removed. It filed 10 identical
+  # "drift or gaps detected" issues (#4-#13) that were never actioned, all
+  # caused by the same unfixed anchor bug: refresh.sh greps for "## Step 11.N"
+  # headings, but SKILL.md's appendix uses "### 11.N", so all 11 subsection
+  # anchors miss on every run. GitHub auto-disabled the workflow on 2026-06-21
+  # after 60 days of repo inactivity, but any push re-enables it, so the
+  # trigger is removed here rather than left to that accident.
+  # Run it by hand if you want a drift report; fix the anchors before
+  # restoring a schedule.
   workflow_dispatch: {}
 
 permissions:
